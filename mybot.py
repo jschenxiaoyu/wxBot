@@ -21,8 +21,8 @@ class MyWXBot(WXBot):
                     self.send_msg_by_uid(reply, uid_test2)
                 if uid_test2 == msg['user']['id']:
                     self.send_msg_by_uid(reply, uid_test1)
-            ''' 图片消息，动画表情现在当做图片处理，后期考虑通过转发实现 '''
-            if content['type'] == 3 or content['type'] == 6:
+            ''' 图片消息。动画表情(type=6)支持不好，后期考虑通过转发实现，系统自带动画表情通过图片方式不支持 '''
+            if content['type'] == 3:
                 self.get_msg_img(msg_id)
                 path = 'temp/img_' + msg_id + '.jpg'
                 if uid_test1 == msg['user']['id']:
