@@ -51,6 +51,9 @@ class MyWXBot(WXBot):
                 if uid_test2 == msg['user']['id']:
                     self.send_msg_by_uid(reply, uid_test1)
                     self.send_file_msg_by_uid(path, uid_test1)
+    def schedule(self):
+        self.send_msg(u'陈晓宇', 'keepalive')
+        time.sleep(36000)
 
 def main():
     bot = MyWXBot()
