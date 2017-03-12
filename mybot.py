@@ -53,7 +53,7 @@ class MyWXBot(WXBot):
                     self.send_file_msg_by_uid(path, uid_test1)
     def schedule(self):
         self.send_msg(u'陈晓宇', 'keepalive')
-        time.sleep(36000)
+        time.sleep(21600)
 
 def main():
     bot = MyWXBot()
